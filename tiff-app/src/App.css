@@ -24,11 +24,16 @@ button:hover {
    min-height: 300px;
    padding: 4px;
    margin: 4px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .App-header {
-  height: 10vh;
+  height: 15vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: left;
+  margin: 16px;
 }

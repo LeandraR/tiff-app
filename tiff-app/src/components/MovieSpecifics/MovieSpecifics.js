@@ -9,7 +9,7 @@ const MovieSpecifics = ({ movie }) => {
             <p>{description}</p>
             {genres.map((g, i) => <p key={i}>{g.name}</p>)}
             {tagline && <p>Tagline: {tagline}</p>}
-            <p>Runtime: {runtime}</p>
+            <p>Runtime: {runtime || 'Not provided'}</p>
         </div>
     );
 };

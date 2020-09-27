@@ -40,10 +40,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src='/logo.svg' alt="logo" />
-        <img style={{ width: '25%' }} src='./noun_Movie_1241202.svg' alt="movie reel" />
-      </header>
-      <h1 style={{ fontWeight: '500', fontSize: '42px' }}>Popular Movies released this year</h1>
-      {loading && <p> Loading</p>}
+        <h1 style={{ fontWeight: '500', fontSize: '42px' }}>Popular Movies released this year</h1>
+      </header>      {loading && <p> Loading</p>}
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
         <section className="card">
           <p>Page {page}</p>
@@ -55,9 +53,8 @@ function App() {
             </React.Fragment>
           )}
         </section>
-
         <section className="card">
-          {detailedResponse && <MovieSpecifics movie={detailedResponse} />}
+          {detailedResponse ? <MovieSpecifics movie={detailedResponse} /> : <img style={{ width: '50%' }} src='./noun_Movie_1241202.svg' alt="movie reel" />}
         </section>
       </div>
       {page > 1 && <button onClick={() => page > 1 ? setPage(page - 1) : null}>Go back to previous Page: {page - 1} </button>}
